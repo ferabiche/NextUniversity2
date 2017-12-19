@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+body{
+  background: #02010a;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+img{
+  filter:drop-shadow(2px 2px 2px #02010a);
+}
+
+.contenido{
+  display:inline-block;
+  width: 900px;
+}
+
+header{
+  width: 100%;
+  background-color: #5b7989;
+  color: white;
+  margin: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: inline-block;
+  font-size: 1em;
+}
+
+h1{
+  text-align: left;
+  text-shadow: 2px 2px 2px #02010a;
+  margin: 2%;
+}
+
+nav{
+  text-align: right;
+  margin-right: 6%;
+}
+
+ul li{
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.imagen-central{
+  margin:none;
+  padding-top: 2%;
+  padding-bottom:2% ;
+  padding-left:3% ;
+  padding-right: 3%;
+  display: flex;
+  flex-direction: column;
+  background-color: #82c3a6;
+  text-align: center;
+}
+
+.imagen-central img{
+  width: 100%;
+  display:inline-block;
+}
+
+.izquierda{
+  display: inline-block;
+  text-align: center;
+  width: 45%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 1.5%;
+}
+
+.derecha{
+  display: inline-block;
+  text-align: center;
+  width: 45%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 1.5%;
+  padding-right: 3%;
+}
+
+.izquierda img{
+  border: 1px solid black;
+  display:inline-block;
+  width: 100%;
+}
+
+.derecha img{
+  border: 1px solid black;
+  display: inline-block;
+  width: 100%;
+}
+
+.imagen-secundaria{
+  margin:none;
+  width: 100%
+  text-align: center;
+  background: #d5c75f;
+  display:inline-block;
+}
+
+footer{
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #C6d5c5;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: none;
+}
+
+
+.contacto{
+  text-align: center;
+  width: 24%;
+  display: inline-block;
+}
+
+.terminos{
+  text-align: center;
+  width: 24%;
+  display: inline-block;
+}
+
+.redes-sociales{
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+}
+
+.redes-sociales img{
+  width: 50%;
+}
+
+table{
+  display: inline-block;
+}
+
+td{
+  font-size: 75%;
+  text-align: left;
+}
+
+.derechos{
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+}
+
+.paisajes{
+  width: 100%;
+  background-color: #d5c75f;
+  display:inline-block;
+}
+
+.retratos{
+  width: 100%;
+  background-color: #d5c75f;
+}
+
+.paisaje1,.paisaje2,.paisaje3,.paisaje4,.paisaje5,.paisaje6{
+  padding: 1%;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+
+.paisajes img{
+  width: 100%;
+  display:inline-block;
+}
+
+.retrato1,.retrato2,.retrato3,.retrato4,.retrato5,.retrato6{
+  padding: 1%;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+
+.retratos img{
+  width: 100%;
+  display:inline-block;
+}
+
+.retrato1,.paisaje1{
+  webkit-filter:blur(10px);
+  filter: blur(10px);
+}
+
+.retrato2,.paisaje2,.retrato4,.paisaje4,.retrato6,.paisaje6{
+  webkit-filter:grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.retrato3,.paisaje3{
+  webkit-filter:sepia(90%);
+  filter: sepia(90%);
+}
+
+.izquierda:hover{
+  animation-name:izquierdamov;
+	animation-duration:2s;
+}
+
+@keyframes izquierdamov {
+  50%{
+    transform: rotate(10deg);
+    border: 2px;
+    -webkit-filter:drop-shadow(3px 3px 3px #82c3ab);
+    filter:drop-shadow(3px 3px 3px #82c3ab);
+  }
+}
+
+.derecha:hover{
+  animation-name:derechamov;
+	animation-duration:2s;
+}
+
+@keyframes derechamov {
+  50%{
+    transform: translate(20px,-5px);
+    border: 2px;
+    -webkit-filter:drop-shadow(3px 3px 3px #82c3ab);
+    filter:drop-shadow(3px 3px 3px #82c3ab);
+  }
+}
+
+.contenido{
+	animation-name:rebote;
+	animation-duration:1s;
+}
+
+@keyframes rebote {
+	0%{
+		margin-top: 150%;
+	}
+	60%{
+		margin-top: -5%;
+	}
+  100%{
+		margin-top: 0%;
+	}
+}
+
+@media (max-width:900px){
+header h1{
+  text-align: center;
+}
+header nav{
+  text-align: center;
+}
+.contenido{
+  width: 100%;
+  margin: 1%
+}
+.derecha{
+  width: 100%;
+  padding: 0%;
+}
+.izquierda{
+  width: 100%;
+  padding: 0%;
+}
+.imagen-secundaria{
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+}
+
+.imagen-secundaria img{
+  width: 95%;
+}
+.contacto{
+  width: 100%;
+}
+.terminos{
+  width: 100%;
+}
+.redes-sociales{
+  width: 100%;
+}
+.derechos{
+  width: 100%;
+}
+.redes-sociales img{
+ width: 20%
+}
+.retrato1,.retrato2,.retrato3,.retrato4,.retrato5,.retrato6{
+  width: 100%;
+}
+.paisaje1,.paisaje2,.paisaje3,.paisaje4,.paisaje5,.paisaje6{
+  width: 100%;
+}
+.retratos img{
+  width: 95%;
+}
+.paisajes img{
+  width: 95%;
+}
+.paisajes{
+  display: flex;
+  flex-direction: column;
+}
+.retratos{
+  display: flex;
+  flex-direction: column;
+}
+}
